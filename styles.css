@@ -1,0 +1,21 @@
+@media(min-width: 768px) {
+    .news-input {
+        width:50%;
+    }
+}
+
+#react {
+    color: #61dbfb;
+}
+#js {
+    color:  #f0db4f;
+}
+#bs {
+    color: #563d7c;
+}
+#html {
+    color: #e34c26;
+}
+#css {
+    color: #264de4;
+}
