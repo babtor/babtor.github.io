@@ -4,35 +4,51 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .wrapper {
   display: grid;
-  height: 100vh;
-  grid-template-columns: 0.2fr 1fr;
-  grid-template-rows: 0.5fr 3fr 0.5fr;
+  grid-template-columns: 0.2fr 1fr 0.2fr;
+  grid-template-rows: 0.5fr 3fr 0.5fr 4fr 4fr 4fr;
   grid-template-areas:
-    "sidebar header"
-    "sidebar main"
-    "sidebar footer";
+    "sidebar header sidebar-right"
+    "sidebar main sidebar-right"
+    "sidebar footer sidebar-right"
+    "sidebar projects sidebar-right"
+    "sidebar experience sidebar-right"
+    "sidebar contact sidebar-right";
 }
 
 header {
   grid-area: header;
-  border-bottom: 3px solid blue;
-  background-color: black;
+  border-bottom: 3px solid #61dbfb;
+  background-color: #111;
 }
 
 main {
   grid-area: main;
-  background-color: black;
-  border-bottom: 3px solid blue;
+  display: flex;
+  background-color: #111;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 footer {
   grid-area: footer;
-  background-color: black;
+  background-color: #111;
+  border-top: 3px solid #61dbfb;
+}
+
+.sidebar-right {
+  grid-area: sidebar-right;
+  background-color: #111;
 }
 
 .sidebar {
+  position: relative;
   grid-area: sidebar;
   z-index: 1;
   top: 0;
@@ -44,17 +60,18 @@ footer {
 }
 
 .sidebar img {
-  margin-left: 30px;
+  margin-left: 50px;
   height: 150px;
   width: 150px;
   border-radius: 50%;
 }
 
 .sidebar a {
-  padding: 8px 8px 8px 32px;
+  margin-left: 40px;
+  padding: 64px 8px 8px 32px;
   text-decoration: none;
-  font-size: 25px;
-  color: #818181;
+  font-size: 35px;
+  color: #61dbfb;
   display: block;
   transition: 0.3s;
 }
@@ -64,6 +81,35 @@ footer {
 }
 
 #typing-text {
+  height: 400px;
+  width: 750px;
   color: white;
+  font-size: 50px;
+  white-space: pre-wrap;
+}
+
+#fixed-text {
+  margin-top: 150px;
+  color: #61dbfb;
   font-size: 150px;
+  width: 750px;
+}
+
+#projects {
+  grid-area: projects;
+  background-color: green;
+}
+
+#experience {
+  grid-area: experience;
+  background-color: blue;
+}
+
+#contact {
+  grid-area: contact;
+  background-color: red;
+}
+
+.links {
+  position: fixed;
 }

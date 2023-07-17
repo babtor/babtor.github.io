@@ -1,6 +1,11 @@
 var i = 0;
-var txt = "Hello, my name is Lucas"; /* The text */
-var speed = 200; /* The speed/duration of the effect in milliseconds */
+var txt =
+  "my name is Lucas Wikström," +
+  "\n" +
+  "a front-end developer" +
+  "\n" +
+  "based in Stockholm."; /* The text */
+var speed = 80; /* The speed/duration of the effect in milliseconds */
 
 function typeWriter() {
   if (i < txt.length) {
