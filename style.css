@@ -81,8 +81,8 @@ footer {
 }
 
 #typing-text {
-  height: 400px;
-  width: 750px;
+  height: 300px;
+  width: 800px;
   color: white;
   font-size: 50px;
   white-space: pre-wrap;
@@ -92,12 +92,26 @@ footer {
   margin-top: 150px;
   color: #61dbfb;
   font-size: 150px;
-  width: 750px;
+  width: 800px;
 }
 
 #projects {
   grid-area: projects;
-  background-color: green;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #111;
+  color: white;
+}
+
+#projects h1 {
+  color: #61dbfb;
+  font-size: 150px;
+}
+
+#projects ul {
+  font-size: 50px;
 }
 
 #experience {
@@ -112,4 +126,23 @@ footer {
 
 .links {
   position: fixed;
+}
+
+.arrow-container {
+  margin-bottom: 50px;
+}
+.arrow {
+  height: 50px;
+  width: 50px;
+  border-style: solid;
+  border-color: #61dbfb;
+  border-width: 0px 1px 1px 0px;
+  transform: rotate(45deg);
+  transition: border-width 150ms ease-in-out;
+  border-bottom-width: 4px;
+  border-right-width: 4px;
+}
+
+.arrow:hover {
+  border-color: white;
 }

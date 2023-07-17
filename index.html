@@ -11,16 +11,21 @@
   <body>
     <div class="wrapper">
       <header>
-        <div class="navbar"></div>
+        <div id="navbar"></div>
       </header>
       <main>
         <p id="fixed-text">Hello,</p>
         <p id="typing-text"></p>
+        <div class="arrow-container">
+          <a data-scroll href="#projects">
+            <div class="arrow"></div>
+          </a>
+        </div>
       </main>
       <div class="sidebar">
         <div class="links">
           <img src="avatar.jpg" alt="avatar" />
-          <a href="#">About</a>
+          <a href="#navbar">About</a>
           <a href="#projects">Projects</a>
           <a href="#experience">Experience</a>
           <a href="#contact">Contact</a>
@@ -29,7 +34,7 @@
       <div class="sidebar-right"></div>
       <footer></footer>
       <section id="projects">
-        <h1>Projects</h1>
+        <h1 id="h1-typing-text">Projects</h1>
         <ul>
           <li>Valinfo</li>
           <li>Placeholder</li>

@@ -4,7 +4,7 @@ var txt =
   "\n" +
   "a front-end developer" +
   "\n" +
-  "based in Stockholm."; /* The text */
+  "currently based in Stockholm."; /* The text */
 var speed = 80; /* The speed/duration of the effect in milliseconds */
 
 function typeWriter() {
