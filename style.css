@@ -34,10 +34,24 @@ footer {
 
 .sidebar {
   grid-area: sidebar;
-  display: flex;
-  justify-content: center;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
 }
 
-.top-text {
-  align-items: flex-start;
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
 }
