@@ -96,6 +96,7 @@ footer {
 }
 
 #projects {
+  min-height: 100vh;
   grid-area: projects;
   display: flex;
   flex-direction: column;
@@ -122,6 +123,7 @@ footer {
 }
 
 #experience {
+  min-height: 100vh;
   color: white;
   grid-area: experience;
   display: flex;
@@ -136,8 +138,34 @@ footer {
 }
 
 #contact {
+  min-height: 100vh;
   grid-area: contact;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: #111;
+  color: white;
+}
+
+.link-wrapper {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-brands:hover {
+  transform: scale(1.5);
+}
+
+.fa-regular:hover {
+  transform: scale(1.5);
+}
+
+#contact a {
+  margin-right: 10%;
+  margin-left: 10%;
 }
 
 .links {
@@ -147,6 +175,7 @@ footer {
 .arrow-container {
   margin-bottom: 50px;
 }
+
 .arrow {
   height: 50px;
   width: 50px;
