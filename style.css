@@ -49,29 +49,27 @@ footer {
 }
 
 .sidebar {
-  position: relative;
   grid-area: sidebar;
   z-index: 1;
   top: 0;
   left: 0;
   background-color: #111;
-  overflow-x: hidden;
-  padding-top: 60px;
+  padding-top: 3.75em;
   transition: 0.5s;
 }
 
 .sidebar img {
-  margin-left: 50px;
-  height: 150px;
-  width: 150px;
+  margin-left: 3.125em;
+  height: 9.375em;
+  width: 9.375em;
   border-radius: 50%;
 }
 
 .sidebar a {
-  margin-left: 40px;
-  padding: 64px 8px 8px 32px;
+  margin-left: 2.5em;
+  padding: 4em 0.5em 0.5em 2em;
   text-decoration: none;
-  font-size: 35px;
+  font-size: 2rem;
   color: #61dbfb;
   display: block;
   transition: 0.3s;
@@ -81,19 +79,19 @@ footer {
   color: #f1f1f1;
 }
 
+.links {
+  position: fixed;
+}
+
 #typing-text {
-  height: 300px;
-  width: 800px;
   color: white;
-  font-size: 50px;
+  font-size: 3.5rem;
   white-space: pre-wrap;
 }
 
 #fixed-text {
-  margin-top: 150px;
   color: #61dbfb;
-  font-size: 150px;
-  width: 800px;
+  font-size: 15rem;
 }
 
 #projects {
@@ -109,17 +107,16 @@ footer {
 
 #projects h1 {
   color: #61dbfb;
-  font-size: 100px;
+  font-size: 6rem;
 }
 
 #projects li {
-  margin-bottom: 30px;
-  margin-top: 30px;
+  margin-bottom: 10%;
+  margin-top: 10%;
 }
 
 #projects ul {
-  font-size: 50px;
-  margin-bottom: 50px;
+  font-size: 3rem;
   list-style: none;
 }
 
@@ -135,7 +132,7 @@ footer {
 }
 
 #experience li {
-  font-size: 50px;
+  font-size: 3rem;
 }
 
 #contact {
@@ -177,17 +174,9 @@ footer {
   margin-left: 10%;
 }
 
-.links {
-  position: fixed;
-}
-
-.arrow-container {
-  margin-bottom: 50px;
-}
-
 .arrow {
-  height: 50px;
-  width: 50px;
+  height: 3.125em;
+  width: 3.125em;
   border-style: solid;
   border-color: #61dbfb;
   border-width: 0px 1px 1px 0px;
@@ -208,161 +197,79 @@ footer {
 
 .li-container {
   display: flex;
-  width: 800px;
+  width: 50em;
 }
 
-@media (max-width: 480px) {
+@media only screen and (max-width: 480px) {
   .wrapper {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 0.2fr 1fr 0.2fr;
     grid-template-rows: 0.5fr 3fr 0.5fr 4fr 4fr 4fr;
     grid-template-areas:
-      "header"
-      "main"
-      "footer"
-      "projects"
-      "experience"
-      "contact";
-  }
-
-  .sidebar-right {
-    display: none;
-  }
-
-  .sidebar {
-    display: none;
-  }
-
-  .sidebar img {
-    display: none;
-  }
-
-  .sidebar a {
-    display: none;
-  }
-
-  header {
-    grid-area: header;
-    border-bottom: 3px solid #61dbfb;
-    background-color: #111;
-  }
-
-  main {
-    grid-area: main;
-    display: flex;
-    background-color: #111;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  footer {
-    grid-area: footer;
-    background-color: #111;
-    border-top: 3px solid #61dbfb;
+      "sidebar header sidebar-right"
+      "sidebar sidebar sidebar-right"
+      "sidebar footer sidebar-right"
+      "sidebar projects sidebar-right"
+      "sidebar experience sidebar-right"
+      "sidebar contact sidebar-right";
   }
 
   #typing-text {
-    color: white;
-    font-size: 2rem;
-    white-space: pre-wrap;
-    width: 400px;
+    display: none;
   }
 
   #fixed-text {
-    color: #61dbfb;
-    font-size: 3rem;
-    width: 400px;
+    display: none;
   }
 
-  #projects {
-    min-height: 100vh;
-    grid-area: projects;
+  .arrow {
+    display: none;
+  }
+
+  .link-wrapper {
+    font-size: 1rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    background-color: #111;
-    color: white;
-  }
-
-  #projects h1 {
-    display: flex;
     align-items: center;
-    justify-content: center;
-    color: #61dbfb;
-    font-size: 1rem;
   }
 
   .li-container {
     display: flex;
-    justify-content: center;
-    width: 400px;
-  }
-
-  #projects li {
-    margin-bottom: 30px;
-    margin-top: 30px;
-  }
-
-  #projects ul {
-    font-size: 1rem;
-    margin-bottom: 50px;
-    list-style: none;
-  }
-
-  #experience {
-    min-height: 100vh;
-    color: white;
-    grid-area: experience;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #111;
-  }
-
-  #experience li {
-    font-size: 1rem;
-  }
-
-  #contact {
-    min-height: 100vh;
-    grid-area: contact;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: #111;
-    color: white;
-  }
-
-  .link-wrapper {
-    display: none;
-  }
-
-  .fa-brands h2 {
-    font-size: 1rem;
-  }
-
-  .fa-regular h2 {
-    font-size: 1rem;
-  }
-
-  #contact a {
-    margin-right: 10%;
-    margin-left: 10%;
+    width: 100%;
   }
 
   .links {
-    position: fixed;
+    display: flex;
+    flex-direction: column;
   }
 
-  .arrow-container {
-    display: none;
+  .sidebar {
+    position: relative;
+    grid-area: sidebar;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
   }
 
-  .active {
-    color: white;
-    font-weight: 600;
+  .sidebar img {
+    margin-left: 50px;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+  }
+
+  .sidebar a {
+    margin-left: 40px;
+    padding: 64px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 35px;
+    color: #61dbfb;
+    display: block;
+    transition: 0.3s;
   }
 }
