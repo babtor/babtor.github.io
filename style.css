@@ -210,3 +210,159 @@ footer {
   display: flex;
   width: 800px;
 }
+
+@media (max-width: 480px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 3fr 0.5fr 4fr 4fr 4fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer"
+      "projects"
+      "experience"
+      "contact";
+  }
+
+  .sidebar-right {
+    display: none;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .sidebar img {
+    display: none;
+  }
+
+  .sidebar a {
+    display: none;
+  }
+
+  header {
+    grid-area: header;
+    border-bottom: 3px solid #61dbfb;
+    background-color: #111;
+  }
+
+  main {
+    grid-area: main;
+    display: flex;
+    background-color: #111;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  footer {
+    grid-area: footer;
+    background-color: #111;
+    border-top: 3px solid #61dbfb;
+  }
+
+  #typing-text {
+    color: white;
+    font-size: 2rem;
+    white-space: pre-wrap;
+    width: 400px;
+  }
+
+  #fixed-text {
+    color: #61dbfb;
+    font-size: 3rem;
+    width: 400px;
+  }
+
+  #projects {
+    min-height: 100vh;
+    grid-area: projects;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #111;
+    color: white;
+  }
+
+  #projects h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #61dbfb;
+    font-size: 1rem;
+  }
+
+  .li-container {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+  }
+
+  #projects li {
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+
+  #projects ul {
+    font-size: 1rem;
+    margin-bottom: 50px;
+    list-style: none;
+  }
+
+  #experience {
+    min-height: 100vh;
+    color: white;
+    grid-area: experience;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #111;
+  }
+
+  #experience li {
+    font-size: 1rem;
+  }
+
+  #contact {
+    min-height: 100vh;
+    grid-area: contact;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #111;
+    color: white;
+  }
+
+  .link-wrapper {
+    display: none;
+  }
+
+  .fa-brands h2 {
+    font-size: 1rem;
+  }
+
+  .fa-regular h2 {
+    font-size: 1rem;
+  }
+
+  #contact a {
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+
+  .links {
+    position: fixed;
+  }
+
+  .arrow-container {
+    display: none;
+  }
+
+  .active {
+    color: white;
+    font-weight: 600;
+  }
+}
