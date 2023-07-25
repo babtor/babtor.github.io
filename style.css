@@ -219,7 +219,7 @@ main img {
   display: flex;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 900px) {
   .wrapper {
     display: grid;
     grid-template-columns: 1fr;
@@ -301,7 +301,7 @@ main img {
   }
 }
 
-@media only screen and (max-width: 1025px) {
+@media only screen and (min-width: 901px) and (max-width: 1920px) {
   .sidebar {
     display: flex;
     align-self: start;
