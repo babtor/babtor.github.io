@@ -59,7 +59,6 @@ footer {
 .links {
   display: flex;
   flex-direction: column;
-
   position: fixed;
 }
 
@@ -299,5 +298,97 @@ main img {
   #projects h1 {
     color: #61dbfb;
     font-size: 4rem;
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  .sidebar {
+    display: flex;
+    align-self: start;
+    justify-content: start;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    padding-top: 3.75em;
+    transition: 0.5s;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+  }
+
+  .sidebar-mobile {
+    display: none;
+  }
+
+  .links-mobile {
+    display: none;
+  }
+
+  main img {
+    height: 9.375em;
+    width: 9.375em;
+    margin-left: 4em;
+    border-radius: 50%;
+  }
+
+  .sidebar a {
+    padding: 1em 0.5em 0.5em 2em;
+    text-decoration: none;
+    font-size: 2rem;
+    color: #61dbfb;
+    display: block;
+    transition: 0.3s;
+  }
+
+  #typing-text {
+    color: white;
+    font-size: 1.5rem;
+    white-space: pre-wrap;
+  }
+
+  #fixed-text {
+    color: #61dbfb;
+    font-size: 8rem;
+  }
+
+  .texts {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 20%;
+    height: 40%;
+  }
+
+  .arrow {
+    display: none;
+  }
+
+  .link-wrapper {
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .fa-brands:hover {
+    transform: scale(1.1);
+  }
+
+  .fa-brands p {
+    padding-bottom: 20%;
+    font-size: 1rem;
+  }
+
+  .fa-regular p {
+    font-size: 1rem;
+  }
+
+  .fa-regular:hover {
+    transform: scale(1.1);
   }
 }
